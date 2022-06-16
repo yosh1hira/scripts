@@ -9,6 +9,8 @@ if [[ $? -ne 0 ]]; then
   echo 'brew update ----------------------------' >> ${log_name} 2>&1
   brew upgrade >> ${log_name} 2>&1
   echo 'brew upgrade ----------------------------' >> ${log_name} 2>&1
-  brew cleanup >> ${log_name} 2>&1
+  brew cleanup --prune=all >> ${log_name} 2>&1
   echo 'brew cleanup ----------------------------' >> ${log_name} 2>&1
+  tldr --update >> ${log_name} 2>&1
+  echo 'tldr --update ----------------------------' >> ${log_name} 2>&1
 fi
