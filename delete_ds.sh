@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find . -name '.DS_Store' -type f -ls -delete
+/usr/bin/find . -name '.DS_Store' -type f -ls -delete
