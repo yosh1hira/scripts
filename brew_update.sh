@@ -2,6 +2,7 @@
 
 log_name=/tmp/brewlog/`date "+%Y%m%d_%H%M%S"`.log
 
+/usr/local/bin/brew doctor
 if [[ $? -ne 0 ]]; then
   /usr/local/bin/brew update >> ${log_name} 2>&1
   echo 'brew update ----------------------------' >> ${log_name} 2>&1
